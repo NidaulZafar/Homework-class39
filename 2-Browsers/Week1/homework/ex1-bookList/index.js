@@ -18,8 +18,26 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  asas
-  // TODO your code goes in here, return the ul element
+  const BookListDiv = document.querySelector("#bookList");
+  const ul = document.createElement("ul");
+  BookListDiv.appendChild(ul);
+
+  books.forEach(book => {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    p.textContent = `${book.title} - ${book.author}`
+    const img = document.createElement("img");
+    img.src = book.URL;
+    li.appendChild(p);
+    li.appendChild(img);
+    ul.appendChild(li);
+    if (book.alreadyRead === true) {
+      li.style.backgroundColor = "green";
+    } else {
+      li.style.backgroundColor = "red";
+    }
+    
+  });
 }
 
 function main() {
@@ -29,18 +47,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
+      URL: "./assets/the_design_of_everyday_things.jpg",
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
+      URL: "./assets/the_most_human_human.jpg",
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
+      URL: "./assets/the_pragmatic_programmer.jpg",
     },
   ];
 
