@@ -34,9 +34,10 @@ function createBookList(books) {
     li.appendChild(p);
     li.appendChild(img);
     ul.appendChild(li);
-    li.classList.add(book.alreadyRead ? li.style.backgroundColor = "green" : li.style.backgroundColor = "red");
+    li.classList.add(book.alreadyRead ? "green" : "red");
     
   });
+  return ul;
 }
 
 function main() {
@@ -65,6 +66,7 @@ function main() {
   ];
 
   const ulElement = createBookList(myBooks);
+  document.querySelector('#bookList').appendChild(ulElement);
 }
 
 window.addEventListener('load', main);

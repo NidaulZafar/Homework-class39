@@ -8,3 +8,11 @@ li {
   padding: 25px;
   margin: 25px;
 }
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
