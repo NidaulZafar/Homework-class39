@@ -18,11 +18,6 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  const BookListDiv = document.querySelector("#bookList");
-  if (!BookListDiv) {
-    console.error('"#bookList" element cannot be found.')
-    return;
-  }
   const ul = document.createElement("ul");
   books.forEach(book => {
     const li = document.createElement("li");
