@@ -24,7 +24,6 @@ function createBookList(books) {
     return;
   }
   const ul = document.createElement("ul");
-  BookListDiv.appendChild(ul);
   books.forEach(book => {
     const li = document.createElement("li");
     const p = document.createElement("p");
