@@ -1,0 +1,52 @@
+{
+  "node": "v16.15.0",
+  "system": {
+    "manufacturer": "Apple Inc.",
+    "model": "MacBookAir6,2"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i5-4260U",
+    "speed": 1.4
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "darwin",
+    "distro": "macOS",
+    "release": "11.6.5"
+  },
+  "vscodeInfo": {
+    "version": "1.71.0",
+    "extensions": [
+      "aaron-bond.better-comments",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-footnotes",
+      "bierner.markdown-mermaid",
+      "bierner.markdown-preview-github-styles",
+      "bierner.markdown-yaml-preamble",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "esbenp.prettier-vscode",
+      "ritwickdey.live-sass",
+      "ritwickdey.LiveServer",
+      "streetsidesoftware.code-spell-checker",
+      "tomoki1207.pdf"
+    ],
+    "userSettings": {
+      "workbench.startupEditor": "none",
+      "editor.formatOnType": true,
+      "editor.formatOnSave": true,
+      "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "workbench.editor.untitled.hint": "hidden",
+      "git.autofetch": true,
+      "window.zoomLevel": 2,
+      "liveServer.settings.donotShowInfoMsg": true,
+      "diffEditor.ignoreTrimWhitespace": false
+    }
+  }
+}
