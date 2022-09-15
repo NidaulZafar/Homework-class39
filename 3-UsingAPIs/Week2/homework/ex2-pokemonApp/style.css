@@ -1,1 +1,29 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  width: 200px;
+  margin: 10px 40%;
+}
+button,
+select {
+  width: 15vw;
+  height: 15vh;
+  font-size: 2vw;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#names-list {
+  padding: 30px;
+}
+
+img {
+  width: 300px;
+}
+
+.error {
+  color: red;
+}
