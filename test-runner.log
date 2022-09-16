@@ -2032,3 +2032,8 @@ Error: Die 1 rolled off the table.
 2022-09-16 06:46:35 info: --------------------------------------------
 2022-09-16 06:46:39 info: All unit tests passed.
 2022-09-16 06:46:43 info: All steps were completed successfully
+2022-09-16 07:17:00 info: ----------------------------------------------
+2022-09-16 07:17:00 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-09-16 07:17:00 info: ----------------------------------------------
+2022-09-16 07:17:04 info: All unit tests passed.
+2022-09-16 07:17:09 info: All steps were completed successfully
