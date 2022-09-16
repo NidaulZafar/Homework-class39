@@ -15,14 +15,18 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const dicePromises = dice.map(rollDie);
+  return Promise.race(dicePromises);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved! the winner is', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
 // ! Do not change or remove the code below
@@ -30,3 +34,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// answer: Just like a normal race, even when one runner is the winner,
+// the others continue to run and try to finish the race.Similarly the promises keep running
+// until they are resolved.
