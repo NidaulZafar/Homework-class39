@@ -20,8 +20,13 @@ const getAnonName = (firstName) => {
   });
 };
 
-function main() {
-  getAnonName('John', console.log);
+async function main() {
+  try {
+    const fullName = await getAnonName('John');
+    console.log(fullName);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 if (process.env.NODE_ENV !== 'test') {
