@@ -25,15 +25,13 @@ parameters and return values to pass data back and forth.
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
-  return new Promise((resolve, reject) => {
     if (response.ok) {
       try {
-        resolve(data);
+        return data;
       } catch (error) {
-        reject(error.message);
+        throw new Error (error.message);
       }
     }
-  });
 }
 
 function fetchAndPopulatePokemons(names) {
@@ -72,9 +70,8 @@ async function main() {
     button.textContent = 'Get Pokemon!';
     document.body.appendChild(div);
     div.appendChild(button);
-    div.appendChild(select);
-    div.appendChild(imgEl);
     button.addEventListener('click', () => {
+      div.appendChild(select);
       data.results.forEach((element) => {
         fetchAndPopulatePokemons(element.name);
       });
@@ -82,6 +79,7 @@ async function main() {
         data.results.forEach((element) => {
           if (element.name === event.target.value) {
             fetchImage(element.url);
+            div.appendChild(imgEl);
           }
         });
       });

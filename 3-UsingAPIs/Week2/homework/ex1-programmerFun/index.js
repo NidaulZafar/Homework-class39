@@ -20,15 +20,13 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 async function requestData(url) {
   const response = await fetch(url);
   const data = await response.json();
-  return new Promise((resolve, reject) => {
     if (response.ok) {
       try {
-        resolve(data);
+        return (data);
       } catch (error) {
-        reject(error.message);
+        throw new Error(error.message);
       }
     }
-  });
 }
 
 function renderImage(data) {
@@ -38,10 +36,10 @@ function renderImage(data) {
   document.body.appendChild(imgEl);
 }
 
-function renderError() {
+function renderError(error) {
   const errorEl = document.createElement('h1');
   document.body.appendChild(errorEl);
-  errorEl.textContent = 'error';
+  errorEl.textContent = error;
 }
 
 async function main() {
@@ -49,8 +47,8 @@ async function main() {
     await requestData('https://xkcd.now.sh/?comic=latest').then((data) => {
       renderImage(data);
     });
-  } catch {
-    renderError();
+  } catch (error) {
+    renderError(error);
   }
 }
 
