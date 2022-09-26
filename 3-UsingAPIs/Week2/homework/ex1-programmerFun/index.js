@@ -19,15 +19,13 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
   const response = await fetch(url);
-  const data = await response.json();
     if (response.ok) {
-      try {
-        return (data);
-      } catch (error) {
-        throw new Error(error.message);
-      }
-    }
+      return response.json();
+    } 
+    throw new Error(`HTTP Error happened: ${response.stat} ${response.statusText}`);
 }
+   
+
 
 function renderImage(data) {
   const imgEl = document.createElement('img');
