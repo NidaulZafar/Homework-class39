@@ -759,3 +759,8 @@ Ran all test suites matching /ex3-rollAnAce.test.js/i.
 2022-09-17 01:30:01 info: ----------------------------------------
 2022-09-17 01:30:04 info: All unit tests passed.
 2022-09-17 01:30:07 info: All steps were completed successfully
+2022-09-26 12:55:21 info: ---------------------------------------------
+2022-09-26 12:55:21 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-09-26 12:55:21 info: ---------------------------------------------
+2022-09-26 12:55:29 info: All unit tests passed.
+2022-09-26 12:55:33 info: All steps were completed successfully
