@@ -24,14 +24,10 @@ parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 async function fetchData(url) {
   const response = await fetch(url);
-  const data = await response.json();
-    if (response.ok) {
-      try {
-        return data;
-      } catch (error) {
-        throw new Error (error.message);
-      }
-    }
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error(`HTTP Error happened: ${response.stat} ${response.statusText}`);
 }
 
 function fetchAndPopulatePokemons(names) {

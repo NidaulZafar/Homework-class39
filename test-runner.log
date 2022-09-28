@@ -764,3 +764,8 @@ Ran all test suites matching /ex3-rollAnAce.test.js/i.
 2022-09-26 12:55:21 info: ---------------------------------------------
 2022-09-26 12:55:29 info: All unit tests passed.
 2022-09-26 12:55:33 info: All steps were completed successfully
+2022-09-28 11:48:29 info: ------------------------------------------
+2022-09-28 11:48:29 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-28 11:48:29 info: ------------------------------------------
+2022-09-28 11:48:37 info: All unit tests passed.
+2022-09-28 11:48:41 info: All steps were completed successfully
